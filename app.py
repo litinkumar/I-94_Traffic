@@ -8,6 +8,7 @@ import pathlib
 import plotly.express as px
 import numpy as np
 import joblib
+import flask
 
 server = flask.Flask(__name__)
 app = dash.Dash(__name__,server=server)
