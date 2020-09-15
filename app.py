@@ -11,11 +11,8 @@ import joblib
 
 from pages import (
     overview,
-    pricePerformance,
-    portfolioManagement,
-    feesMins,
-    distributions,
-    newsReviews,
+    EDA,
+    prediction,
 )
 
 PATH = pathlib.Path(__file__).parent
@@ -37,24 +34,15 @@ app.layout = html.Div(
 # Update page
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def display_page(pathname):
-    if pathname == "/Dash_Traffic_App/price-performance":
-        return pricePerformance.create_layout(app)
-    elif pathname == "/Dash_Traffic_App/portfolio-management":
-        return portfolioManagement.create_layout(app)
-    elif pathname == "/Dash_Traffic_App/fees":
-        return feesMins.create_layout(app)
-    elif pathname == "/Dash_Traffic_App/distributions":
-        return distributions.create_layout(app)
-    elif pathname == "/Dash_Traffic_App/news-and-reviews":
-        return newsReviews.create_layout(app)
+    if pathname == "/Dash_Traffic_App/EDA":
+        return EDA.create_layout(app)
+    elif pathname == "/Dash_Traffic_App/prediction":
+        return prediction.create_layout(app)
     elif pathname == "/Dash_Traffic_App/full-view":
         return (
             overview.create_layout(app),
-            pricePerformance.create_layout(app),
-            portfolioManagement.create_layout(app),
-            feesMins.create_layout(app),
-            distributions.create_layout(app),
-            newsReviews.create_layout(app),
+            EDA.create_layout(app),
+            prediction.create_layout(app),
         )
     else:
         return overview.create_layout(app)

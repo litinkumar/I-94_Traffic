@@ -1,7 +1,6 @@
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
-from sklearn.ensemble import RandomForestRegressor
 import joblib
 import math
 
@@ -13,8 +12,6 @@ import pathlib
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../data").resolve()
 
-df_equity_char = pd.read_csv(DATA_PATH.joinpath("df_equity_char.csv"))
-df_equity_diver = pd.read_csv(DATA_PATH.joinpath("df_equity_diver.csv"))
 
 df_traffic_volume = pd.read_csv(DATA_PATH.joinpath("Traffic.csv"))
 

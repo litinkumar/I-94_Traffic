@@ -25,12 +25,12 @@ def get_header(app):
                         ),
                         dcc.Link(
                             "Exploratory Data Analysis",
-                            href="/Dash_Traffic_App/price-performance",
+                            href="/Dash_Traffic_App/EDA",
                             className="tab",
                         ),
                         dcc.Link(
                             "Prediction",
-                            href="/Dash_Traffic_App/portfolio-management",
+                            href="/Dash_Traffic_App/prediction",
                             className="tab",
                         ),
                     ],

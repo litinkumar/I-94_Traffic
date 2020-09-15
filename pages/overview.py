@@ -12,9 +12,6 @@ PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../data").resolve()
 
 
-df_fund_facts = pd.read_csv(DATA_PATH.joinpath("df_fund_facts.csv"))
-df_price_perf = pd.read_csv(DATA_PATH.joinpath("df_price_perf.csv"))
-
 df_traffic_volume=pd.read_csv(DATA_PATH.joinpath("Traffic.csv"))
 KPI=df_traffic_volume.groupby(by='Season').mean().round(2)
 
