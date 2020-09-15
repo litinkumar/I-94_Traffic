@@ -16,7 +16,7 @@ from pages import (
 )
 
 PATH = pathlib.Path(__file__).parent
-DATA_PATH = PATH.joinpath("../Dash_Traffic_App/data").resolve()
+DATA_PATH = PATH.joinpath("../I-94_Traffic/data").resolve()
 df_traffic_volume = pd.read_csv(DATA_PATH.joinpath("Traffic.csv"))
 
 app = dash.Dash(
