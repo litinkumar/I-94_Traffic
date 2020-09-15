@@ -9,6 +9,9 @@ import plotly.express as px
 import numpy as np
 import joblib
 
+server = flask.Flask(__name__)
+app = dash.Dash(__name__,server=server)
+
 from pages import (
     overview,
     EDA,
